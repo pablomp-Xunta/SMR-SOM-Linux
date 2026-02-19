@@ -2,4 +2,4 @@
 
 ![IES Castro da Uz](https://www.edu.xunta.gal/centros/iescastrodauz/system/files/zeropoint3_logo.jpg)
 
-Repositorio de códigos vistos en clase para el módulo de Desarrollo de Interfaces del segundo curso del Ciclo Superior de DAM.
+Repositorio de códigos vistos na clase para o módulo de Sistemas Operativos Monopostyo do Ciclo Medio de SMR.
