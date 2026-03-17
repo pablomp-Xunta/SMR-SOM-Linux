@@ -98,7 +98,13 @@ passwd -e auga
 ## 7. Crear usuario fanta
 
 Crear el usuario:
-- fanta → contraseña: fanta (caduca en 1 mes)  
+- fanta → contraseña: fanta (caduca en 1 mes)
+
+```
+useradd -m -K PASS_MAX_DAYS=30 fanta
+```
+
+o
 
 ```
 useradd -m fanta
@@ -136,10 +142,16 @@ Darle al usuario auga permisos de sudo editando archivos
 visudo
 ```
 
+O modificando el archivo
+
+```
+nano /etc/sudoers
+```
+
 Añadir:
 
 ```
-auga ALL=(ALL) ALL
+auga	ALL=(ALL:ALL) ALL
 ```
 
 ---
@@ -159,6 +171,6 @@ cat /etc/group
 ```
 
   >
-  > `/etc/passwd`: usuarios  
-  > `/etc/group`: grupos  
+  > `/etc/passwd`: archivo de usuarios  
+  > `/etc/group`: archivo de grupos  
   >
