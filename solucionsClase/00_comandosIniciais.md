@@ -1,3 +1,5 @@
+![IES Castro da Uz](https://www.edu.xunta.gal/centros/iescastrodauz/system/files/zeropoint3_logo.jpg)
+
 # Práctica de Comandos Linux
 
 ## 1. Crear entorno de trabajo:
