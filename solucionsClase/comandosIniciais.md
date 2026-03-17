@@ -22,23 +22,25 @@ ls -lisah
 
 Explicar qué hace cada opción: -l, -a, -h, -i, -s
 
-> #SOLUCIÓN
-> 
-> - `-l`: Información detallada
-> - `-a`: Incluye ocultos
-> - `-h`: Tamaño legible
-> - `-i`: Inodo
-> - `-s`: Tamaño en bloques
-> 
+  > 
+  > - `-l`: Información detallada
+  > - `-a`: Incluye ocultos
+  > - `-h`: Tamaño legible
+  > - `-i`: Inodo
+  > - `-s`: Tamaño en bloques
+  > 
 
 ¿Por qué no aparece .oculto sin -a?
 
-**.oculto no aparece** porque empieza por `.`
+  >
+  > **.oculto no aparece** porque empieza por `.`
+  >
 
 ¿Qué diferencia hay entre -l y -lh?
 
-**-l vs -lh**: bytes vs formato legible
-
+  >
+  > **-l vs -lh**: bytes vs formato legible
+  >
 
 ## 3. Ordenación:
 
@@ -52,10 +54,11 @@ ls -ltr
 
 Explicar qué hacen las opciones -S, -t y -r
 
-- `-S`: tamaño
-- `-t`: fecha
-- `-r`: inverso
-
+  >
+  > - `-S`: tamaño
+  > - `-t`: fecha
+  >  - `-r`: inverso
+  > 
 ---
 
 ## 4. Navegación
@@ -76,10 +79,12 @@ cd ~/Descargas
 
 ¿Qué representa ., .. y ~? ¿Qué hace exactamente cd -?
 
-- `.` actual
-- `..` padre
-- `~` home
-- `cd -` vuelve al directorio anterior
+  > 
+  > - `.` actual
+  > - `..` padre
+  > - `~` home
+  > - `cd -` vuelve al directorio anterior
+  >
 
 Probar:
 
@@ -91,10 +96,10 @@ pwd -L
 
 Explicar la diferencia entre -P y -L.
 
-
-
-`pwd -P`: ruta real  
-`pwd -L`: ruta lógica
+  > 
+  > `pwd -P`: ruta real  
+  > `pwd -L`: ruta lógica
+  >
 
 ---
 
@@ -114,8 +119,10 @@ mkdir -p prueba1/prueba2
 
 Explicar qué hace la opción -p. Consultar en el manual la opción -m.
 
-`-p`: crea directorios intermedios  
-`-m`: define permisos
+  > 
+  > `-p`: crea directorios intermedios  
+  > `-m`: define permisos
+  >
 
 ---
 
@@ -137,18 +144,25 @@ cp -r origen copia
 
 Explicar por qué es necesaria la opción -r.
 
-`-r`: necesario para copiar directorios  
+  > 
+  > `-r`: necesario para copiar directorios  
+  >
 
 ```
 cp -i origen/archivo.txt copia/
 cp -rv origen nuevaCopia
 ```
-`-i`: confirmación  
-`-v`: verbose  
+
+  > 
+  > `-i`: confirmación  
+  > `-v`: verbose  
+  >
 
 Buscar en la ayuda y probar la opción -u.
 
-`-u`: solo si es más reciente
+  > 
+  > `-u`: solo si es más reciente
+  >
 
 ---
 
@@ -168,8 +182,10 @@ mv nuevo.txt carpeta/
 
 Explicar la diferencia entre mover y renombrar.
 
-Renombrar = mismo directorio  
-Mover = cambia ubicación
+  > 
+  > Renombrar = mismo directorio  
+  > Mover = cambia ubicación
+  >
 
 ---
 
@@ -190,10 +206,12 @@ rm -r carpeta
 
 Consultar opción -f en el manual.
 
-`-i`: confirmación  
-`-r`: recursivo  
-`-f`: forzado  
-`rm -rf`: borra todo sin preguntar → peligroso
+  > 
+  > `-i`: confirmación  
+  > `-r`: recursivo  
+  > `-f`: forzado  
+  > `rm -rf`: borra todo sin preguntar → peligroso
+  >
 
 Explicar qué hace rm -rf y por qué es peligroso.
 
@@ -211,13 +229,16 @@ echo -e "Hola\nMundo"
 
 Explicar qué hacen -n y -e.
 
+  > 
+  > `-n`: sin salto  
+  > `-e`: interpreta escapes  
+  >
+
 ```
 echo $HOME
 echo $HOSTNAME
 echo "Estoy en $PWD"
 ```
-
-`-n`: sin salto  
-`-e`: interpreta escapes  
-
-Variables: `$HOME`, `$HOSTNAME`, `$PWD`
+  > 
+  > Variables: `$HOME`, `$HOSTNAME`, `$PWD`
+  > 
