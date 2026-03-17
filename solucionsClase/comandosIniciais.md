@@ -22,13 +22,14 @@ ls -lisah
 
 Explicar qué hace cada opción: -l, -a, -h, -i, -s
 
-- `-l`: Información detallada
-- `-a`: Incluye ocultos
-- `-h`: Tamaño legible
-- `-i`: Inodo
-- `-s`: Tamaño en bloques
-
-
+> #SOLUCIÓN
+> 
+> - `-l`: Información detallada
+> - `-a`: Incluye ocultos
+> - `-h`: Tamaño legible
+> - `-i`: Inodo
+> - `-s`: Tamaño en bloques
+> 
 
 ¿Por qué no aparece .oculto sin -a?
 
