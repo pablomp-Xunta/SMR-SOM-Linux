@@ -10,11 +10,6 @@ En Bash, antes de ejecutar un comando, la shell realiza **expansiones** sobre lo
 Bash define tres métodos de entrecomillado: **barra invertida** `\` (escape), **comillas simples** `'...'` y **comillas dobles** `"..."`. Las comillas simples preservan literalmente todo lo que contienen; las dobles preservan casi todo excepto `$`, ``` ` ``` y `\` (y `!` si hay expansión de historial), permitiendo expandir variables dentro. La barra invertida preserva el valor literal del carácter siguiente y también sirve para continuación de línea con `\<nueva-línea>`.
 
 ### Tabla rápida de metacaracteres más comunes
-| Metacaracter | Tipo | Qué hace (Bash) | Ejemplo seguro |
-## Tabla rápida de metacaracteres más comunes
-
-| Metacaracter | Tipo | Qué hace (Bash) | Ejemplo seguro |
-## Tabla rápida de metacaracteres más comunes
 
 | Metacaracter | Tipo | Qué hace (Bash) | Ejemplo seguro |
 |---|---|---|---|
