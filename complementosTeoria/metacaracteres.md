@@ -24,8 +24,8 @@ Bash define tres métodos de entrecomillado: **barra invertida** `\` (escape), *
 | `<` | redirección | Redirige stdin desde archivo | `wc -l < out.txt`  |
 | `2>` | redirección | Redirige stderr | `cmd 2> errores.log`  |
 | `&>` / `&>>` | redirección | Redirige stdout+stderr (sobrescribe/añade) | `cmd &>> todo.log`  |
-| `;` | control | Separa comandos en una lista | `cmd1; cmd2` citeturn13view5 |
-| `&&` | control | Ejecuta cmd2 si cmd1 devuelve 0 | `make && sudo make install` citeturn13view5 |
+| `;` | control | Separa comandos en una lista | `cmd1; cmd2` |
+| `&&` | control | Ejecuta cmd2 si cmd1 devuelve 0 | `make && sudo make install` |
 | `||` | control | Ejecuta cmd2 si cmd1 falla | `cmd || echo "falló"` |
 | `( ... )` | control | Ejecuta lista en una subshell | `(cd /tmp; ls)` |
 | `"..."` / `'...'` | quoting | Doble: expande `$`; simple: literal | `echo "$HOME"` |
@@ -244,6 +244,6 @@ done
 Usar `find`/`xargs` sobre archivos controlados por terceros puede abrir problemas serios, incluyendo escenarios de **elevación de privilegios** si el sistema ejecuta “find de mantenimiento” con permisos elevados. Por eso, hay que extremar cuidado con acciones destructivas (borrados) y con carreras (race conditions) entre listar archivos y operarlos posteriormente.
 
 Buenas prácticas recomendadas:
-- **Evita** `find ... -exec rm ...` sin “ensayo”: prueba primero con `-print` o `-ls`. La manpage recalca cuestiones de seguridad con `-exec` y sugiere `-execdir` como alternativa. citeturn11view3turn4view3  
-- Para nombres con espacios/saltos de línea: usa `-print0` + `xargs -0` o un bucle leyendo NUL; `-print0` está pensado para esto y `xargs -0` también. citeturn11view2turn15view1  
-- **Entrecomilla variables** siempre: `grep -- "$patron"` y `find "$dir"` para evitar interpretaciones inesperadas y “inyecciones” por caracteres especiales/espacios. La propia semántica de comillas y escapes en bash explica por qué. citeturn5view2turn16view0  
+- **Evita** `find ... -exec rm ...` sin “ensayo”: prueba primero con `-print` o `-ls`. La manpage recalca cuestiones de seguridad con `-exec` y sugiere `-execdir` como alternativa.  
+- Para nombres con espacios/saltos de línea: usa `-print0` + `xargs -0` o un bucle leyendo NUL; `-print0` está pensado para esto y `xargs -0` también.
+- **Entrecomilla variables** siempre: `grep -- "$patron"` y `find "$dir"` para evitar interpretaciones inesperadas y “inyecciones” por caracteres especiales/espacios. La propia semántica de comillas y escapes en bash explica por qué. 
