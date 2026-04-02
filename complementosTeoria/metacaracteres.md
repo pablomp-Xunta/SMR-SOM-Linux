@@ -1,3 +1,11 @@
+# SMR-SOM-Linux
+
+![IES Castro da Uz](https://www.edu.xunta.gal/centros/iescastrodauz/system/files/zeropoint3_logo.jpg)
+
+Repositorio de códigos vistos na clase para o módulo de Sistemas Operativos Monopostyo do Ciclo Medio de SMR.
+
+-------------
+
 # Metacaracteres en Bash y búsquedas con find/grep en Linux
 
 ## Resumen ejecutivo
@@ -11,25 +19,25 @@ Bash define tres métodos de entrecomillado: **barra invertida** `\` (escape), *
 | Metacaracter | Tipo | Qué hace (Bash) | Ejemplo seguro |
 |---|---|---|---|
 | `*` | globbing | Cualquier cadena en nombres de archivo | `ls *.log` |
-| `?` | globbing | Un carácter cualquiera | `ls foto?.jpg`  |
-| `[...]` | globbing | Un carácter de una lista/rango/clase | `ls archivo[0-9].txt`  |
+| `?` | globbing | Un carácter cualquiera | `ls foto?.jpg` |
+| `[...]` | globbing | Un carácter de una lista/rango/clase | `ls archivo[0-9].txt` |
 | `{a,b}` / `{1..5}` | expansión | Genera cadenas (no requiere que existan) | `echo {1..3}` |
 | `~` | expansión | Expande a `$HOME` o home de usuario | `cd ~` |
 | `$VAR` / `${VAR}` | expansión | Expansión de parámetros/variables (`$` “introduce” expansión) | `echo "$USER"` |
 | `$(cmd)` / `` `cmd` `` | expansión | Sustitución de orden (mejor `$(...)`) | `fecha=$(date)` |
-| `|` | control | Pipe: stdout de cmd1 → stdin de cmd2 | `ls | grep txt` |
-| `|&` | control | Pipe incluyendo stderr (`2>&1 |`) | `cmd |& tee log` |
-| `>` | redirección | Redirige stdout (sobrescribe) | `echo hola > out.txt`  |
-| `>>` | redirección | Redirige stdout (añade) | `echo hola >> out.txt`  |
-| `<` | redirección | Redirige stdin desde archivo | `wc -l < out.txt`  |
-| `2>` | redirección | Redirige stderr | `cmd 2> errores.log`  |
-| `&>` / `&>>` | redirección | Redirige stdout+stderr (sobrescribe/añade) | `cmd &>> todo.log`  |
+| `\|` | control | Pipe: stdout de cmd1 → stdin de cmd2 | `ls \| grep txt` |
+| `\|&` | control | Pipe incluyendo stderr (`2>&1 \|`) | `cmd \|& tee log` |
+| `>` | redirección | Redirige stdout (sobrescribe) | `echo hola > out.txt` |
+| `>>` | redirección | Redirige stdout (añade) | `echo hola >> out.txt` |
+| `<` | redirección | Redirige stdin desde archivo | `wc -l < out.txt` |
+| `2>` | redirección | Redirige stderr | `cmd 2> errores.log` |
+| `&>` / `&>>` | redirección | Redirige stdout+stderr (sobrescribe/añade) | `cmd &>> todo.log` |
 | `;` | control | Separa comandos en una lista | `cmd1; cmd2` |
 | `&&` | control | Ejecuta cmd2 si cmd1 devuelve 0 | `make && sudo make install` |
-| `||` | control | Ejecuta cmd2 si cmd1 falla | `cmd || echo "falló"` |
+| `\|\|` | control | Ejecuta cmd2 si cmd1 falla | `cmd \|\| echo "falló"` |
 | `( ... )` | control | Ejecuta lista en una subshell | `(cd /tmp; ls)` |
 | `"..."` / `'...'` | quoting | Doble: expande `$`; simple: literal | `echo "$HOME"` |
-| `\` | escape | Escapa el siguiente carácter | `echo \*`  |
+| `\` | escape | Escapa el siguiente carácter | `echo \*` |
 
 **Consejo clave:** `*` en globbing **no es** `.*` en regex, y `?` en globbing **no es** `?` en regex. Para `grep`, los patrones suelen ir entre comillas para evitar que la shell los “toque” antes de tiempo.
 
@@ -56,7 +64,7 @@ Cuando vas a pasar resultados de `find` a otro comando, usar `-print` puede romp
 `grep` busca patrones en archivos y muestra las líneas que coinciden; los patrones suelen ir entre comillas cuando se usa desde una shell. Cuando no se da archivo, las búsquedas recursivas examinan el directorio de trabajo y las no recursivas leen stdin; y un archivo `-` significa stdin. Debian recomienda evitar `egrep/fgrep/rgrep` y usar `grep -E/-F/-r`.
 
 ### Opciones esenciales (principiante-intermedio)
-- `-i` ignora mayúsculas/minúsculas. citeturn9view0  
+- `-i` ignora mayúsculas/minúsculas.
 - `-r` busca recursivamente en directorios (y si no indicas ruta, busca en el directorio actual).
 - `-n` antepone número de línea. 
 - `-E` usa regex extendidas (ERE). `-G` es el modo básico (BRE, por defecto).
