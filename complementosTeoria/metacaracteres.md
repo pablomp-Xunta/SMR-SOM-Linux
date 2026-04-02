@@ -3,7 +3,6 @@
 
 # Metacaracteres en Bash y búsquedas con find/grep en Linux
 
-## Resumen ejecutivo
 Este apartado explica **cómo interpreta Bash** ciertos caracteres “especiales” (metacaracteres) y cómo aprovecharlos para **buscar archivos** con `find` y **buscar texto dentro de archivos** con `grep` en Debian/Ubuntu. Verás la diferencia clave entre **globbing** (comodines de la shell para *nombres de archivo*) y **expresiones regulares** (patrones para *texto*), además de cómo combinarlo todo con **pipes** y **redirecciones**. Se incluyen scripts `.sh` listos para ejecutar, ejercicios con soluciones y advertencias de seguridad/rendimiento (especialmente al borrar con `find -exec rm`). La referencia principal para detalles exactos son las páginas de manual: `man bash`, `man find` y `man grep`.
 ## Metacaracteres y quoting en Bash
 En Bash, antes de ejecutar un comando, la shell realiza **expansiones** sobre lo que escribes (por ejemplo, expansión de llaves `{}`, expansión de tilde `~`, expansión de variables `$`, sustitución de orden `$(...)`, etc.). El manual de Bash indica el **orden**: primero llaves y tilde, luego parámetros/variables y sustitución de orden, después división de palabras y finalmente expansión de nombres de ruta (globbing). Esto explica por qué comillar (quoting) o escapar caracteres cambia el resultado de un comando.
@@ -12,24 +11,27 @@ Bash define tres métodos de entrecomillado: **barra invertida** `\` (escape), *
 
 ### Tabla rápida de metacaracteres más comunes
 | Metacaracter | Tipo | Qué hace (Bash) | Ejemplo seguro |
+## Tabla rápida de metacaracteres más comunes
+
+| Metacaracter | Tipo | Qué hace (Bash) | Ejemplo seguro |
 |---|---|---|---|
 | `*` | globbing | Cualquier cadena en nombres de archivo | `ls *.log` |
 | `?` | globbing | Un carácter cualquiera | `ls foto?.jpg` |
 | `[...]` | globbing | Un carácter de una lista/rango/clase | `ls archivo[0-9].txt` |
 | `{a,b}` / `{1..5}` | expansión | Genera cadenas (no requiere que existan) | `echo {1..3}` |
 | `~` | expansión | Expande a `$HOME` o home de usuario | `cd ~` |
-| `$VAR` / `${VAR}` | expansión | Expansión de parámetros/variables (`$` “introduce” expansión) | `echo "$USER"` |
+| `$VAR` / `${VAR}` | expansión | Expansión de parámetros/variables (`$` introduce expansión) | `echo "$USER"` |
 | `$(cmd)` / `` `cmd` `` | expansión | Sustitución de orden (mejor `$(...)`) | `fecha=$(date)` |
-| `\|` | control | Pipe: stdout de cmd1 → stdin de cmd2 | `ls \| grep txt` |
-| `\|&` | control | Pipe incluyendo stderr (`2>&1 \|`) | `cmd \|& tee log` |
+| <code>|</code> | control | Pipe: stdout de cmd1 → stdin de cmd2 | <code>ls \| grep txt</code> |
+| <code>|&</code> | control | Pipe incluyendo stderr (`2>&1 |`) | <code>cmd \|& tee log</code> |
 | `>` | redirección | Redirige stdout (sobrescribe) | `echo hola > out.txt` |
 | `>>` | redirección | Redirige stdout (añade) | `echo hola >> out.txt` |
 | `<` | redirección | Redirige stdin desde archivo | `wc -l < out.txt` |
 | `2>` | redirección | Redirige stderr | `cmd 2> errores.log` |
-| `&>` / `&>>` | redirección | Redirige stdout+stderr (sobrescribe/añade) | `cmd &>> todo.log` |
+| `&>` / `&>>` | redirección | Redirige stdout+stderr | `cmd &>> todo.log` |
 | `;` | control | Separa comandos en una lista | `cmd1; cmd2` |
 | `&&` | control | Ejecuta cmd2 si cmd1 devuelve 0 | `make && sudo make install` |
-| `\|\|` | control | Ejecuta cmd2 si cmd1 falla | `cmd \|\| echo "falló"` |
+| <code>||</code> | control | Ejecuta cmd2 si cmd1 falla | <code>cmd \|\| echo "falló"</code> |
 | `( ... )` | control | Ejecuta lista en una subshell | `(cd /tmp; ls)` |
 | `"..."` / `'...'` | quoting | Doble: expande `$`; simple: literal | `echo "$HOME"` |
 | `\` | escape | Escapa el siguiente carácter | `echo \*` |
