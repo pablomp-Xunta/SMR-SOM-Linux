@@ -14,27 +14,30 @@ Bash define tres métodos de entrecomillado: **barra invertida** `\` (escape), *
 ## Tabla rápida de metacaracteres más comunes
 
 | Metacaracter | Tipo | Qué hace (Bash) | Ejemplo seguro |
+## Tabla rápida de metacaracteres más comunes
+
+| Metacaracter | Tipo | Qué hace (Bash) | Ejemplo seguro |
 |---|---|---|---|
-| `*` | globbing | Cualquier cadena en nombres de archivo | `ls *.log` |
-| `?` | globbing | Un carácter cualquiera | `ls foto?.jpg` |
-| `[...]` | globbing | Un carácter de una lista/rango/clase | `ls archivo[0-9].txt` |
-| `{a,b}` / `{1..5}` | expansión | Genera cadenas (no requiere que existan) | `echo {1..3}` |
-| `~` | expansión | Expande a `$HOME` o home de usuario | `cd ~` |
-| `$VAR` / `${VAR}` | expansión | Expansión de parámetros/variables (`$` introduce expansión) | `echo "$USER"` |
-| `$(cmd)` / `` `cmd` `` | expansión | Sustitución de orden (mejor `$(...)`) | `fecha=$(date)` |
-| <code>|</code> | control | Pipe: stdout de cmd1 → stdin de cmd2 | <code>ls \| grep txt</code> |
-| <code>|&</code> | control | Pipe incluyendo stderr (`2>&1 |`) | <code>cmd \|& tee log</code> |
-| `>` | redirección | Redirige stdout (sobrescribe) | `echo hola > out.txt` |
-| `>>` | redirección | Redirige stdout (añade) | `echo hola >> out.txt` |
-| `<` | redirección | Redirige stdin desde archivo | `wc -l < out.txt` |
-| `2>` | redirección | Redirige stderr | `cmd 2> errores.log` |
-| `&>` / `&>>` | redirección | Redirige stdout+stderr | `cmd &>> todo.log` |
-| `;` | control | Separa comandos en una lista | `cmd1; cmd2` |
-| `&&` | control | Ejecuta cmd2 si cmd1 devuelve 0 | `make && sudo make install` |
-| <code>||</code> | control | Ejecuta cmd2 si cmd1 falla | <code>cmd \|\| echo "falló"</code> |
-| `( ... )` | control | Ejecuta lista en una subshell | `(cd /tmp; ls)` |
-| `"..."` / `'...'` | quoting | Doble: expande `$`; simple: literal | `echo "$HOME"` |
-| `\` | escape | Escapa el siguiente carácter | `echo \*` |
+| <code>*</code> | globbing | Cualquier cadena en nombres de archivo | <code>ls *.log</code> |
+| <code>?</code> | globbing | Un carácter cualquiera | <code>ls foto?.jpg</code> |
+| <code>[...]</code> | globbing | Un carácter de una lista/rango/clase | <code>ls archivo[0-9].txt</code> |
+| <code>{a,b}</code> / <code>{1..5}</code> | expansión | Genera cadenas (no requiere que existan) | <code>echo {1..3}</code> |
+| <code>~</code> | expansión | Expande a <code>$HOME</code> o home de usuario | <code>cd ~</code> |
+| <code>$VAR</code> / <code>${VAR}</code> | expansión | Expansión de parámetros/variables | <code>echo "$USER"</code> |
+| <code>$(cmd)</code> / <code>`cmd`</code> | expansión | Sustitución de orden (mejor <code>$(...)</code>) | <code>fecha=$(date)</code> |
+| <code>&#124;</code> | control | Pipe: stdout de cmd1 → stdin de cmd2 | <code>ls \| grep txt</code> |
+| <code>&#124;&amp;</code> | control | Pipe incluyendo stderr (<code>2&gt;&amp;1 &#124;</code>) | <code>cmd \|&amp; tee log</code> |
+| <code>&gt;</code> | redirección | Redirige stdout (sobrescribe) | <code>echo hola &gt; out.txt</code> |
+| <code>&gt;&gt;</code> | redirección | Redirige stdout (añade) | <code>echo hola &gt;&gt; out.txt</code> |
+| <code>&lt;</code> | redirección | Redirige stdin desde archivo | <code>wc -l &lt; out.txt</code> |
+| <code>2&gt;</code> | redirección | Redirige stderr | <code>cmd 2&gt; errores.log</code> |
+| <code>&amp;&gt;</code> / <code>&amp;&gt;&gt;</code> | redirección | Redirige stdout+stderr | <code>cmd &amp;&gt;&gt; todo.log</code> |
+| <code>;</code> | control | Separa comandos en una lista | <code>cmd1; cmd2</code> |
+| <code>&amp;&amp;</code> | control | Ejecuta cmd2 si cmd1 devuelve 0 | <code>make &amp;&amp; sudo make install</code> |
+| <code>&#124;&#124;</code> | control | Ejecuta cmd2 si cmd1 falla | <code>cmd \|\| echo "falló"</code> |
+| <code>( ... )</code> | control | Ejecuta lista en una subshell | <code>(cd /tmp; ls)</code> |
+| <code>"..."</code> / <code>'...'</code> | quoting | Doble: expande <code>$</code>; simple: literal | <code>echo "$HOME"</code> |
+| <code>\</code> | escape | Escapa el siguiente carácter | <code>echo \*</code> |
 
 **Consejo clave:** `*` en globbing **no es** `.*` en regex, y `?` en globbing **no es** `?` en regex. Para `grep`, los patrones suelen ir entre comillas para evitar que la shell los “toque” antes de tiempo.
 
