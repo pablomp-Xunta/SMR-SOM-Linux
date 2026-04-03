@@ -17,3 +17,7 @@ __Pablo Martínez Pavón__
 - [REGEX](https://pablomp-xunta.github.io/SMR-SOM-Linux/complementosTeoria/regex.html)
 
 ## Exercicios resoltos
+
+0. [Comandos iniciais](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/00_comandosIniciais.html)
+
+1. [Usuarios e grupos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/01_usuarios_grupos.html)
