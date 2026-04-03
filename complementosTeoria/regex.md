@@ -6,7 +6,7 @@ La diferencia más importante entre POSIX y PCRE no es solo sintáctica (“qué
 
 En la práctica con `grep`, lo habitual es:
 - Usar `grep -E` (ERE) para la mayoría de búsquedas y validaciones “razonables”.
-- Reservar `grep -P` (PCRE) cuando necesitas **lookarounds** (`(?=...)`, `(?<=...)`), clases abreviadas (`\d`, `\w`), cuantificadores perezosos (`*?`) o construcciones avanzadas (grupos con nombre, etc.). citeturn18view2turn21view0turn25view1
+- Reservar `grep -P` (PCRE) cuando necesitas **lookarounds** (`(?=...)`, `(?<=...)`), clases abreviadas (`\d`, `\w`), cuantificadores perezosos (`*?`) o construcciones avanzadas (grupos con nombre, etc.). 
 - Asumir que `grep` es **fundamentalmente lineal por líneas**: por defecto no puede “cruzar” saltos de línea; en GNU grep existe `-z` (líneas separadas por NUL) como mecanismo especial, y en casos complejos conviene pasar a `awk`, `sed` o `perl`.
 
 En cuanto a “validar” con regex: funciona bien para **estructuras** (p. ej., IPv4, CP) y como **filtro previo** (p. ej., DNI o email), pero hay validaciones que requieren reglas externas (ej. letra del DNI) o gramáticas demasiado ricas (ej. email completo según Internet Message Format).
@@ -58,8 +58,6 @@ En terminal hay dos niveles:
 2) **El motor regex** interpreta metacaracteres.
 
 Por eso suele recomendarse envolver patrones en **comillas simples** `'...'` para que el shell no “toque” el patrón, y usar `-e` cuando el patrón podría empezar por `-`.
-
-image_group{"layout":"carousel","aspect_ratio":"16:9","query":["cheatsheet expresiones regulares español","grep regular expressions quick reference","POSIX character classes bracket expressions"],"num_per_query":1}
 
 ## POSIX y PCRE: comparación y diferencias relevantes
 
@@ -144,7 +142,7 @@ Una regex puede verificar **formato** (8 dígitos + letra) pero **no puede calcu
 1) `grep` filtra candidatos por formato.  
 2) `awk` o `perl` calcula la letra y valida.  
 
-El algoritmo oficial (explicado por la entity["organization","Dirección General de Ordenación del Juego","gobierno de espana"]) es: dividir el número entre 23, tomar el resto (0–22) y mapear a la letra según la tabla; incluye el ejemplo `12345678 → resto 14 → Z`.
+El algoritmo oficial (explicado por el Gobierno de España") es: dividir el número entre 23, tomar el resto (0–22) y mapear a la letra según la tabla; incluye el ejemplo `12345678 → resto 14 → Z`.
 
 #### Regex (filtro de formato) en POSIX ERE
 
@@ -220,8 +218,8 @@ perl -ne 'chomp; if(/^(\d{8})([A-Za-z])$/){$n=$1; $l=uc($2); $k="TRWAGMYFPDXBNJZ
 
 **Diagrama de flujo (validación DNI)**
 
-```mermaid
-flowchart TD
+<pre class="mermaid">
+  flowchart TD
   A[Texto de entrada] --> B{¿Formato 8 dígitos + letra?}
   B -- No --> X[Rechazar]
   B -- Sí --> C[Extraer número y letra]
@@ -230,9 +228,9 @@ flowchart TD
   E --> F{¿Letra calculada = letra dada?}
   F -- Sí --> G[Aceptar]
   F -- No --> X
-```
+</pre>  
 
-La parte “mapear resto→letra” y el ejemplo oficial están publicados por un organismo público. citeturn23view0
+La parte “mapear resto→letra” y el ejemplo oficial están publicados por un organismo público.
 
 ### Validación de email
 
@@ -254,7 +252,7 @@ Por ello se suelen usar dos patrones:
 **Explicación paso a paso**
 - `^` … `$`: validación de línea completa.
 - `[A-Za-z0-9._%+-]+`: local-part “pragmático” (caracteres comunes).  
-- `@`: separador. citeturn28search2  
+- `@`: separador.
 - `[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+`: dominio con al menos un punto.  
 
 **Válidos**
@@ -412,7 +410,7 @@ Además, una corrección normativa indica explícitamente casos como Ceuta y Mel
 
 **Válidos**
 - `28013`
-- `51001` (Ceuta, rango permitido) citeturn22view0  
+- `51001` (Ceuta, rango permitido)
 
 **No válidos**
 - `ABCDE`
@@ -524,8 +522,8 @@ grep -nE '^https?://([A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,6
 
 **Diagrama conceptual (parseo URI simplificado)**
 
-```mermaid
-flowchart LR
+<pre class="mermaid">
+  flowchart LR
   A["URL"] --> B{"scheme = http/https?"}
   B -- No --> X["Rechazar"]
   B -- Si --> C["host"]
@@ -533,6 +531,6 @@ flowchart LR
   D --> E{"ruta /... ?"}
   E --> F{"query ?... ?"}
   F --> G["Aceptar si estructura cumple"]
-```
+</pre>  
 
 La descomposición scheme/authority/path/query/fragment está definida por la ABNF del RFC.
