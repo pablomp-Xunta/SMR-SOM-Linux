@@ -526,13 +526,13 @@ grep -nE '^https?://([A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,6
 
 ```mermaid
 flowchart LR
-  A[URL] --> B{scheme = http/https?}
-  B -- No --> X[Rechazar]
-  B -- Sí --> C[// host]
-  C --> D{puerto :d{1,5}?}
-  D --> E{ruta /... ?}
-  E --> F{query ?... ?}
-  F --> G[Aceptar si estructura cumple]
+  A["URL"] --> B{"scheme = http/https?"}
+  B -- No --> X["Rechazar"]
+  B -- Si --> C["host"]
+  C --> D{"puerto (1-5 digitos)?"}
+  D --> E{"ruta /... ?"}
+  E --> F{"query ?... ?"}
+  F --> G["Aceptar si estructura cumple"]
 ```
 
 La descomposición scheme/authority/path/query/fragment está definida por la ABNF del RFC.
