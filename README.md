@@ -12,7 +12,8 @@ __Pablo Martínez Pavón__
 
 ## Complementos teoría
 
-![Metacaracteres](https://pablomp-xunta.github.io/SMR-SOM-Linux/complementosTeoria/metacaracteres.html)
-![REGEX](https://pablomp-xunta.github.io/SMR-SOM-Linux/complementosTeoria/regex.html)
+- ![Metacaracteres](https://pablomp-xunta.github.io/SMR-SOM-Linux/complementosTeoria/metacaracteres.html)
+
+- ![REGEX](https://pablomp-xunta.github.io/SMR-SOM-Linux/complementosTeoria/regex.html)
 
 ## Exercicios resoltos
