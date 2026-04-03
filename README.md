@@ -7,3 +7,12 @@ Repositorio de códigos vistos na clase para o módulo de Sistemas Operativos Mo
 Curso 2025 - 2026 - IES Plurilingüe Castro da Uz
 
 __Pablo Martínez Pavón__
+
+------
+
+## Complementos teoría
+
+![Metacaracteres](https://pablomp-xunta.github.io/SMR-SOM-Linux/complementosTeoria/metacaracteres.html)
+![REGEX](https://pablomp-xunta.github.io/SMR-SOM-Linux/complementosTeoria/regex.html)
+
+## Exercicios resoltos
