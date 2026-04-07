@@ -5,8 +5,11 @@
 ## 1. Crear estructura de directorios
 
 empresa/
+
 ├── documentos/
+
 ├── scripts/
+
 └── backups/
 
 ```
