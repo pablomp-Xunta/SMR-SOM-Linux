@@ -21,3 +21,5 @@ __Pablo Martínez Pavón__
 0. [Comandos iniciais](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/00_comandosIniciais.html)
 
 1. [Usuarios e grupos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/01_usuarios_grupos.html)
+
+2. [Permisos e redireccións](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/02_permisosRedireccions.html)
