@@ -2,6 +2,11 @@
 
 # Práctica de Búsquedas Linux
 
+
+## Creación do entorno de traballo
+
+[Enlace ó código](https://raw.githubusercontent.com/pablomp-Xunta/SMR-SOM-Linux/refs/heads/main/solucionsClase/estructuraUNIX.sh)
+
 ---
 
 ## A. BÚSQUEDA POR NOMBRE (metacaracteres)
