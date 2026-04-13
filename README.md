@@ -23,3 +23,5 @@ __Pablo Martínez Pavón__
 1. [Usuarios e grupos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/01_usuarios_grupos.html)
 
 2. [Permisos e redireccións](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/02_permisosRedireccions.html)
+
+3. [Find e grep](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/03_busquedas.html)
