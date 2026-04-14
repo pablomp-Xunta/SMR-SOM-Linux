@@ -7,6 +7,17 @@
 
 [Enlace ó código](https://raw.githubusercontent.com/pablomp-Xunta/SMR-SOM-Linux/refs/heads/main/solucionsClase/estructuraUNIX.sh)
 
+Se queremos executar directamente o arquivo haberá que darlle permisos de execución
+
+```bash
+chmod +x estructuraUNIX.sh
+./estructuraUNIX.sh
+
+# o
+
+bash estructuraUNIX.sh
+```
+
 ---
 
 ## A. BÚSQUEDA POR NOMBRE (metacaracteres)
