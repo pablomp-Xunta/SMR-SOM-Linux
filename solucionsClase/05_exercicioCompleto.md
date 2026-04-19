@@ -287,7 +287,7 @@ sudo chown user:alumnado ~/exame/documentos/nota.txt
 > └── deep/n1/n2/ → ultimo.log
 > ```
 >
-[Scriot para crear o entorno](https://raw.githubusercontent.com/pablomp-Xunta/SMR-SOM-Linux/refs/heads/main/solucionsClase/estructuraProcura.sh)
+[Script para crear o entorno](https://raw.githubusercontent.com/pablomp-Xunta/SMR-SOM-Linux/refs/heads/main/solucionsClase/estructuraProcura.sh)
 
 ---
 
