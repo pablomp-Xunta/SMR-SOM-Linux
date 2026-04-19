@@ -25,5 +25,7 @@ __Pablo Martínez Pavón__
 2. [Permisos e redireccións](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/02_permisosRedireccions.html)
 
 3. [Find e grep](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/03_busquedas.html)
+
+4. [REGEX](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/04_procurasREGEX.html)
    
 5. [Exercicio Completo](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/05_exercicioCompleto.html)
