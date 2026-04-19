@@ -1,6 +1,6 @@
 ![IES Castro da Uz](https://www.edu.xunta.gal/centros/iescastrodauz/system/files/zeropoint3_logo.jpg)
 
-# Práctica SOM4_5 — Solucións
+# Práctica SOM — Exercicio Completo Linux
 
 > Comezo da práctica co usuario `user`.
 
