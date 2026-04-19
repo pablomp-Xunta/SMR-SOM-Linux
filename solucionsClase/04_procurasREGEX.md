@@ -1,6 +1,6 @@
 ![IES Castro da Uz](https://www.edu.xunta.gal/centros/iescastrodauz/system/files/zeropoint3_logo.jpg)
 
-# Práctica grep — Expresiones regulares
+# Práctica SOM — Expresiones regulares (REGEX)
 
 > Entorno creado por `crear_entorno_grepUNIX.sh` en el directorio `practica_grep/`.
 > Estructura de ficheros:
