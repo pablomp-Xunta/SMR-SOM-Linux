@@ -276,7 +276,7 @@ sudo chown user:alumnado ~/exame/documentos/nota.txt
 
 ## Parte 3 — Buscas en `/buscaqueigualatopas`
 
-> Entorno creado polo script `a.sh`. Estrutura relevante:
+> Entorno creado por script. Estrutura relevante:
 >
 > ```
 > /buscaqueigualatopas/
@@ -286,6 +286,8 @@ sudo chown user:alumnado ~/exame/documentos/nota.txt
 > ├── .hidden/ → .oculto.log
 > └── deep/n1/n2/ → ultimo.log
 > ```
+>
+[Scriot para crear o entorno](https://raw.githubusercontent.com/pablomp-Xunta/SMR-SOM-Linux/refs/heads/main/solucionsClase/estructuraProcura.sh)
 
 ---
 
