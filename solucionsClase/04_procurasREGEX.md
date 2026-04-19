@@ -12,6 +12,8 @@
 > └── internacional.txt
 > ```
 
+[Script para a creación do entorno](https://raw.githubusercontent.com/pablomp-Xunta/SMR-SOM-Linux/refs/heads/main/solucionsClase/regex.sh)
+
 ---
 
 ## EJ 1 — Buscar todos los DNI válidos
