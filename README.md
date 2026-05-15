@@ -18,6 +18,8 @@ __Pablo Martínez Pavón__
 
 ## Exercicios resoltos
 
+### Linux I
+
 0. [Comandos iniciais](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/00_comandosIniciais.html)
 
 1. [Usuarios e grupos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/01_usuarios_grupos.html)
@@ -29,3 +31,7 @@ __Pablo Martínez Pavón__
 4. [REGEX](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/04_procurasREGEX.html)
    
 5. [Exercicio Completo](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/05_exercicioCompleto.html)
+
+### Linux II
+
+7. [Montaxe de discos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/06_discosLinux.md)
