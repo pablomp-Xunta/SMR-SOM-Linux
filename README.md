@@ -18,7 +18,7 @@ __Pablo Martínez Pavón__
 
 ## Exercicios resoltos
 
-### Linux I
+### UD4. Linux I
 
 0. [Comandos iniciais](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/00_comandosIniciais.html)
 
@@ -32,7 +32,7 @@ __Pablo Martínez Pavón__
    
 5. [Exercicio Completo](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/05_exercicioCompleto.html)
 
-### Linux II
+### UD5. Linux II
 
 6. [Montaxe de discos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/06_discosLinux.html)
    
