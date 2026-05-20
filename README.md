@@ -37,3 +37,4 @@ __Pablo Martínez Pavón__
 6. [Montaxe de discos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/06_discosLinux.html)
    
 7. [Variables](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/07_variables.html)
+8. [Scripts, Procesos, Servizos, Rede e Cron](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/08_final.html)
