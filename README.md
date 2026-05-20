@@ -34,4 +34,6 @@ __Pablo Martínez Pavón__
 
 ### Linux II
 
-7. [Montaxe de discos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/06_discosLinux.html)
+6. [Montaxe de discos](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/06_discosLinux.html)
+   
+7. [Variables](https://pablomp-xunta.github.io/SMR-SOM-Linux/solucionsClase/07_variables.html)
